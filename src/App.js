@@ -26,6 +26,23 @@ function App() {
       }
     })
   };
+  const handleRemove = (idx, y) => {
+    setNominate(state => {
+      const newState = state.filter(x => state.indexOf(x) !== idx);
+      return [...newState];
+    })
+
+    setState(state => {
+      const removeIdx = state.result.Search.findIndex(x => x.Title === y.Title)
+      const disablebtns = [...state.disabled];
+      disablebtns[removeIdx] = false;
+      return {
+        ...state,
+        disabled: disablebtns
+      }
+    })
+    
+  }
   return (
     <div className="app">
       <h1 className="app-header">The Shoppies</h1>
@@ -54,7 +71,7 @@ function App() {
               <div key={idx}>
                 <h5>{y.Title}</h5>
                 <p>{y.Year}</p>
-                <button>Remove</button>
+                <button onClick={() => handleRemove(idx, y)}>Remove</button>
               </div>
             ))
           } 
