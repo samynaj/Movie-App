@@ -67,5 +67,17 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 800px) {
+  .app-body {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.app-body-cardlist {
+  width: 50%;
+}
+.app-body-nominate {
+  width: 50%;
+}
 
 
