@@ -52,8 +52,8 @@ function App() {
         <div className="app-body-nominate">
           <h3>Movies Nominated</h3>
           {
-           nominate.length && nominate.map(y => (
-              <div>
+           nominate.length && nominate.map((y, idx) => (
+              <div key={idx}>
                 <h5>{y.Title}</h5>
                 <p>{y.Year}</p>
                 <button>Remove</button>
