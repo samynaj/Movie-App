@@ -25,9 +25,7 @@ function App() {
         disabled: disablebtns
       }
     })
-    console.log(idx)
-    console.log(nominate)
-  }
+  };
   return (
     <div className="app">
       <h1 className="app-header">The Shoppies</h1>
